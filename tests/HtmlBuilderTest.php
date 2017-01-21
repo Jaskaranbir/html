@@ -47,7 +47,7 @@ class HtmlBuilderTest extends PHPUnit_Framework_TestCase
 
         $ol = $this->htmlBuilder->ol($list, $attributes);
 
-        $this->assertEquals('<ol class="example"><li>foo</li><li>bar</li><li>&amp;</li></ol>', $ol);
+        $this->assertEquals('<ol class="example"><li>foo</li><li>bar</li><li>&amp;amp;</li></ol>', $ol);
     }
 
     public function testUl()
@@ -57,7 +57,7 @@ class HtmlBuilderTest extends PHPUnit_Framework_TestCase
 
         $listElement = $this->htmlBuilder->ul($list, $parentAttributes);
 
-        $this->assertEquals('<ul class="par-class" id="parent"><li class="someClass">foo</li><li>bar</li><li class="class22" onclick="alert(&#039;test&#039;)>&amp;</li><ul><li>example</li></ul></ul>', $listElement);
+        $this->assertEquals('<ul class="par-class" id="parent"><li class="someClass">foo</li><li>bar</li><li class="class22" onclick="alert(&#039;test&#039;)>&amp;amp;</li><ul><li>example</li></ul></ul>', $listElement);
     }
 
     public function testMeta()
